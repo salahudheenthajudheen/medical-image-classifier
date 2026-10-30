@@ -1,0 +1,24 @@
+# Python environments and caches
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local datasets and test images
+data/
+sample_images/
+*.jpg
+*.jpeg
+*.png
+
+# Training outputs and local logs
+training.log
+*.ipynb_checkpoints/
+.streamlit/secrets.toml
+
+# macOS metadata
+.DS_Store
+
+# Keep the deployment model and labels in Git so the app can run remotely.
+models/*.keras

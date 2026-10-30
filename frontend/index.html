@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Medical Image Classifier</title></head>
+<body>
+  <h1>Medical Image Classifier</h1>
+  <p>Educational prototype only. This is not a medical diagnosis.</p>
+  <select id="module"><option value="chest_xray">Chest X-ray</option><option value="brain_mri">Brain MRI</option><option value="retina">Retinal image</option></select>
+  <input id="image" type="file" accept="image/*"><button id="predict">Predict</button>
+  <pre id="result"></pre>
+  <script>
+    document.getElementById('predict').onclick = async () => {
+      const file = document.getElementById('image').files[0];
+      if (!file) return alert('Choose an image first.');
+      const data = new FormData();
+      data.append('module', document.getElementById('module').value);
+      data.append('image', file);
+      const response = await fetch('http://127.0.0.1:8000/predict', {method: 'POST', body: data});
+      document.getElementById('result').textContent = JSON.stringify(await response.json(), null, 2);
+    };
+  </script>
+</body>
+</html>

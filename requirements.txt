@@ -1,0 +1,12 @@
+tensorflow-macos==2.16.2
+tensorflow-metal==1.2.0
+opencv-python<5
+scikit-learn
+matplotlib
+fastapi
+uvicorn
+python-multipart
+streamlit
+pillow
+numpy<2
+datasets
