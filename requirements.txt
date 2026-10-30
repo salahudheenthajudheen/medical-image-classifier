@@ -1,11 +1,4 @@
-tensorflow==2.22.0rc0
-opencv-python<5
-scikit-learn
-matplotlib
-fastapi
-uvicorn
-python-multipart
 streamlit
+tensorflow==2.22.0rc0
 pillow
-numpy<2
-datasets
+numpy>=2.1.0
